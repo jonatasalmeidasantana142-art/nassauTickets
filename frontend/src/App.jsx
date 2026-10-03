@@ -1,5 +1,5 @@
 import Totem from "./pages/Totem"
-import Painel from "./pages/Painel"
+import Painel from "./pages/painel"
 
 function App() {
   return (

@@ -52,4 +52,31 @@ function App() {
   )
 }
 
+import Login from "./pages/login"
+return (
+  <div>
+    <Login />
+
+    <hr />
+
+    <Totem onEmitirSenha={adicionarSenha} />
+
+    <hr />
+
+    <Painel senhas={senhasChamadas} />
+
+    <hr />
+
+    <Atendimento
+      fila={fila}
+      senhaAtual={
+        senhasChamadas.length > 0
+          ? senhasChamadas[senhasChamadas.length - 1].numero
+          : null
+      }
+      onChamarSenha={chamarSenha}
+    />
+  </div>
+)
+
 export default App

@@ -9,8 +9,13 @@ function App() {
       <hr />
 
       <Painel />
+      <hr />
+
+      <atendimento />
     </div>
   )
 }
+
+import Atendimento from "./pages/Atendimento"
 
 export default App

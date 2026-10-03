@@ -2,7 +2,6 @@ import { useState } from "react"
 import Totem from "./pages/Totem"
 import Painel from "./pages/Painel"
 import Atendimento from "./pages/Atendimento"
-import Login from "./pages/login"
 
 function App() {
   const [fila, setFila] = useState([])

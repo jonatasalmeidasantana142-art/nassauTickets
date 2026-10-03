@@ -42,3 +42,22 @@ nassauTickets/
 ├── .gitignore
 ├── LICENSE
 └── README.md
+
+## Documentação
+
+A documentação do projeto está organizada na pasta `docs/`.
+
+- `branding/` — identidade visual do sistema.
+- `mer/` — modelo entidade-relacionamento.
+- `mockups/` — documentação das telas e interfaces.
+- `models/uml/` — diagramas UML.
+- `requirements/` — requisitos funcionais, não funcionais e regras de negócio.
+
+## Execução
+
+### Frontend
+
+Entre na pasta do frontend:
+
+```bash
+cd frontend

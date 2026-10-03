@@ -1,22 +1,23 @@
-function Painel() {
-  const senhas = [
-    { numero: "261003-SP001", guiche: "Guichê 1" },
-    { numero: "261003-SE001", guiche: "Guichê 2" },
-    { numero: "261003-SG001", guiche: "Guichê 3" },
-  ]
-
+function Painel({ senhas }) {
   return (
     <div>
       <h1>Painel de Atendimento</h1>
 
       <p>Últimas senhas chamadas</p>
 
-      {senhas.map((senha) => (
-        <div key={senha.numero}>
-          <h2>{senha.numero}</h2>
-          <p>{senha.guiche}</p>
-        </div>
-      ))}
+      {senhas.length === 0 && (
+        <p>Nenhuma senha foi chamada ainda.</p>
+      )}
+
+      {senhas
+        .slice(-5)
+        .reverse()
+        .map((senha) => (
+          <div key={senha.numero}>
+            <h2>{senha.numero}</h2>
+            <p>{senha.guiche}</p>
+          </div>
+        ))}
     </div>
   )
 }

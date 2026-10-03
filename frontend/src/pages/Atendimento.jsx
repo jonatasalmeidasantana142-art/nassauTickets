@@ -1,34 +1,20 @@
-import { useState } from "react"
-
-function atendimento() {
-  const [senhaAtual, setSenhaAtual] = useState(null)
-
-  const senhas = [
-    "261003-SP001",
-    "261003-SE001",
-    "261003-SG001",
-    "261003-SP002",
-  ]
-
-  function chamarProxima() {
-    const proxima = senhas.find((senha) => senha !== senhaAtual)
-
-    setSenhaAtual(proxima)
-  }
-
+function Atendimento({ fila, senhaAtual, onChamarSenha }) {
   return (
     <div>
       <h1>Atendimento</h1>
 
       <p>Guichê 1</p>
 
-      <button onClick={chamarProxima}>
+      <p>Senhas aguardando: {fila.length}</p>
+
+      <button onClick={onChamarSenha}>
         Chamar próxima senha
       </button>
 
       {senhaAtual && (
         <section>
           <h2>Senha chamada:</h2>
+
           <h1>{senhaAtual}</h1>
 
           <p>Dirija-se ao Guichê 1.</p>
@@ -38,4 +24,4 @@ function atendimento() {
   )
 }
 
-export default atendimento
+export default Atendimento

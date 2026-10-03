@@ -2,8 +2,9 @@ import { useState } from "react"
 import Header from "../components/header"
 import Button from "../components/button"
 
-function Totem() {
+function Totem({ onEmitirSenha }) {
   const [senha, setSenha] = useState(null)
+
   const [sequencias, setSequencias] = useState({
     SP: 0,
     SG: 0,
@@ -26,7 +27,11 @@ function Totem() {
 
     const numero = String(novaSequencia).padStart(3, "0")
 
-    setSenha(`${ano}${mes}${dia}-${tipo}${numero}`)
+    const novaSenha = `${ano}${mes}${dia}-${tipo}${numero}`
+
+    setSenha(novaSenha)
+
+    onEmitirSenha(novaSenha)
   }
 
   return (

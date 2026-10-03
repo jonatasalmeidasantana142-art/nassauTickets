@@ -1,7 +1,16 @@
 import Totem from "./pages/Totem"
+import Painel from "./pages/Painel"
 
 function App() {
-  return <Totem />
+  return (
+    <div>
+      <Totem />
+
+      <hr />
+
+      <Painel />
+    </div>
+  )
 }
 
 export default App

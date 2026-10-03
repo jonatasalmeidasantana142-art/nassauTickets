@@ -8,8 +8,10 @@ function App() {
   const [senhasChamadas, setSenhasChamadas] = useState([])
 
   function adicionarSenha(senha) {
-    setFila((filaAtual) => [...filaAtual, senha])
-  }
+  console.log("CHEGOU NO APP:", senha)
+
+  setFila((filaAtual) => [...filaAtual, senha])
+}
 
   function chamarSenha() {
     if (fila.length === 0) {

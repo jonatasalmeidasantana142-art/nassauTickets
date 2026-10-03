@@ -1,0 +1,16 @@
+# Diagrama de Estados — nassauTickets
+
+## Fluxo de uma senha
+
+```mermaid
+stateDiagram-v2
+    [*] --> EMITIDA
+    EMITIDA --> AGUARDANDO
+    AGUARDANDO --> CHAMADA
+    CHAMADA --> CHAMADA_NOVAMENTE
+    CHAMADA --> EM_ATENDIMENTO
+    CHAMADA_NOVAMENTE --> EM_ATENDIMENTO
+    CHAMADA --> NAO_COMPARECEU
+    EM_ATENDIMENTO --> ATENDIDA
+    ATENDIDA --> [*]
+    NAO_COMPARECEU --> [*]
